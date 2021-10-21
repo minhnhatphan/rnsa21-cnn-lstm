@@ -1,16 +1,15 @@
 # RSNA-MICCAI Brain Tumor Radiogenomic Classification 2nd place solution
-https://www.kaggle.com/c/rsna-miccai-brain-tumor-radiogenomic-classification
+[Competition link](https://www.kaggle.com/c/rsna-miccai-brain-tumor-radiogenomic-classification)
+
+[Solution write-up](https://www.kaggle.com/c/rsna-miccai-brain-tumor-radiogenomic-classification/discussion/280033)
 
 This is a refactored repository from 2 notebooks:
 - [Training notebook](https://www.kaggle.com/minhnhatphan/rnsa-21-cnn-lstm-train/notebook)
 - [Inference notebook](https://www.kaggle.com/minhnhatphan/rnsa-21-cnn-lstm-inference)
 
-To run this repository with ease, please refer to this notebook
-
-
+To run this repository with ease, please refer to this Kaggle notebook
 
 If you want to run locally, there are certain steps you need to make:
- 
  
 1. Install dependencies via `pip install - r requirements.txt`
 2. Download processed train dataset from [here](https://www.kaggle.com/jonathanbesomi/rsna-miccai-png). This is a public cleaned PNG dataset of the competition, to be used for training
