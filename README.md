@@ -12,8 +12,8 @@ To run this repository with ease, please refer to this Kaggle notebook
 If you want to run locally, there are certain steps you need to make:
  
 1. Install dependencies via `pip install - r requirements.txt`
-2. Download processed train dataset from [here](https://www.kaggle.com/jonathanbesomi/rsna-miccai-png). This is a public cleaned PNG dataset of the competition, to be used for training
-3. Download the competition dataset
+2. Download processed train dataset from [here](https://www.kaggle.com/jonathanbesomi/rsna-miccai-png). This is a cleaned PNG public dataset of the competition, we use this dataset in the training phase
+3. Download the [competition dataset](https://www.kaggle.com/c/rsna-miccai-brain-tumor-radiogenomic-classification/data), mostly for the use of inferencing test set
 4. Download pretrained EfficientNet-B0 weights [here](https://www.kaggle.com/hmendonca/efficientnet-pytorch). 
 5. Change/create a setting json file that has the following keys:
 
@@ -27,3 +27,4 @@ If you want to run locally, there are certain steps you need to make:
     File [SETTINGS_kaggle.json](settings/SETTINGS_kaggle.json) is an example to construct your custom SETTINGS file
 6. Run training script `python ./src/train.py --setting-path {PATH-TO-YOUR-SETTINGS.JSON}`
 7. Run prediction script `python ./src/predict.py --setting-path {PATH-TO-YOUR-SETTINGS.JSON}`
+8. You can download the trained checkpoints [here](https://www.kaggle.com/minhnhatphan/rnsa21-best-weights) to skip the training part

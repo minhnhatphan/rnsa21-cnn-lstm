@@ -1,7 +1,0 @@
-{
-    "DATA_PATH":"../data/",
-    "TRAIN_DATA_PATH": "../data/train/", 
-    "TEST_DATA_PATH": "../data/test/", 
-    "MODEL_CHECKPOINT_DIR": "../models/", 
-    "SUBMISSION_DIR": "../submissions/"
-}
