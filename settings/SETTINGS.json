@@ -3,4 +3,5 @@
     "TRAIN_DATA_PATH": "../data/train/", 
     "TEST_DATA_PATH": "../data/test/", 
     "MODEL_CHECKPOINT_DIR": "../models/", 
-    "SUBMISSION_DIR": "../submissions/"}
+    "SUBMISSION_DIR": "../submissions/"
+}

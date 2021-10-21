@@ -4,6 +4,7 @@ import random
 import numpy as np
 import cv2
 import pydicom
+import json
 
 def seed_everything(seed):
     random.seed(seed)
@@ -21,6 +22,11 @@ def load_image(path, size=(256,256)):
     
     image = cv2.resize(image, size) / 255
     return image.astype('f')
+
+def get_setting(path):
+    with open(path,'r') as f:
+        settings = json.load(f)
+    return settings
 
 def uniform_temporal_subsample(x, num_samples):
     '''

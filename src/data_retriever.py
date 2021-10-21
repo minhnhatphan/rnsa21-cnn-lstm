@@ -7,7 +7,8 @@ import os
 from utils import load_image, uniform_temporal_subsample, load_dicom
 
 class DataRetriever(Dataset):
-    def __init__(self, paths, targets, n_frames, img_size, transform=None):
+    def __init__(self, patient_path, paths, targets, n_frames, img_size, transform=None):
+        self.patient_path = patient_path
         self.paths = paths
         self.targets = targets
         self.n_frames = n_frames
@@ -34,7 +35,8 @@ class DataRetriever(Dataset):
     
     def __getitem__(self, index):
         _id = self.paths[index]
-        patient_path = f"../input/rsna-miccai-png/train/{str(_id).zfill(5)}/"
+        patient_path = os.path.join(self.patient_path, f'{str(_id).zfill(5)}/')
+
         channels = []
         for t in ["FLAIR", "T1w", "T1wCE", "T2w"]:
             t_paths = sorted(
@@ -53,12 +55,12 @@ class DataRetriever(Dataset):
             channels.append(channel)
             
         channels = torch.stack(channels).transpose(0,1)
-        
         y = torch.tensor(self.targets[index], dtype=torch.float)
         return {"X": channels.float(), "y": y}
 
 class TestDataRetriever(Dataset):
-    def __init__(self, paths, n_frames, img_size, transform=None):
+    def __init__(self, patient_path, paths, n_frames, img_size, transform=None):
+        self.patient_path = patient_path
         self.paths = paths
         self.n_frames = n_frames
         self.img_size = img_size
@@ -77,7 +79,7 @@ class TestDataRetriever(Dataset):
     
     def __getitem__(self, index):
         _id = self.paths[index]
-        patient_path = f"../input/rsna-miccai-brain-tumor-radiogenomic-classification/test/{str(_id).zfill(5)}/"
+        patient_path = os.path.join(self.patient_path, f'{str(_id).zfill(5)}/')
         channels = []
         for t in ["FLAIR","T1w", "T1wCE", "T2w"]:
             t_paths = sorted(

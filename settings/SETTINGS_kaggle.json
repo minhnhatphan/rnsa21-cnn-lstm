@@ -1,0 +1,8 @@
+{
+    "DATA_PATH":"../input/rsna-miccai-brain-tumor-radiogenomic-classification/",
+    "TRAIN_DATA_PATH": "../input/rsna-miccai-png/train/", 
+    "TEST_DATA_PATH": "../input/rsna-miccai-brain-tumor-radiogenomic-classification/test/", 
+    "MODEL_CHECKPOINT_DIR": "rnsa21-cnn-lstm/models/weights", 
+    "PRETRAINED_CHECKPOINT_DIR": "../models/pretrained/", 
+    "SUBMISSION_DIR": "rnsa21-cnn-lstm/submissions/"
+}
