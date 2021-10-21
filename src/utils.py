@@ -23,7 +23,7 @@ def load_image(path, size=(256,256)):
     image = cv2.resize(image, size) / 255
     return image.astype('f')
 
-def get_setting(path):
+def get_settings(path):
     with open(path,'r') as f:
         settings = json.load(f)
     return settings
