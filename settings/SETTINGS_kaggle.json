@@ -1,8 +1,8 @@
 {
-    "DATA_PATH":"../input/rsna-miccai-brain-tumor-radiogenomic-classification/",
-    "TRAIN_DATA_PATH": "../input/rsna-miccai-png/train/", 
-    "TEST_DATA_PATH": "../input/rsna-miccai-brain-tumor-radiogenomic-classification/test/", 
+    "DATA_PATH":"/input/rsna-miccai-brain-tumor-radiogenomic-classification/",
+    "TRAIN_DATA_PATH": "/input/rsna-miccai-png/train/", 
+    "TEST_DATA_PATH": "/input/rsna-miccai-brain-tumor-radiogenomic-classification/test/", 
     "MODEL_CHECKPOINT_DIR": "rnsa21-cnn-lstm/models/weights", 
-    "PRETRAINED_CHECKPOINT_DIR": "../models/pretrained/", 
+    "PRETRAINED_CHECKPOINT_PATH": "/input/efficientnet-pytorch/efficientnet-b0-08094119.pth", 
     "SUBMISSION_DIR": "rnsa21-cnn-lstm/submissions/"
 }

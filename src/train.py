@@ -69,7 +69,7 @@ def main(device, settings):
             num_workers=8,
         )
         
-        model = Model()
+        model = Model(cnn_path=settings['PRETRAINED_CHECKPOINT_PATH'])
         model.to(device)
         optimizer = torch.optim.Adam(model.parameters(), lr=0.0001)
         criterion = F.binary_cross_entropy_with_logits
