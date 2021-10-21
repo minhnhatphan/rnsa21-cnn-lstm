@@ -7,7 +7,7 @@ This is a refactored repository from 2 notebooks:
 - [Training notebook](https://www.kaggle.com/minhnhatphan/rnsa-21-cnn-lstm-train/notebook)
 - [Inference notebook](https://www.kaggle.com/minhnhatphan/rnsa-21-cnn-lstm-inference)
 
-To run this repository with ease, please refer to this Kaggle notebook
+To run this repository with ease, please refer to [this Kaggle notebook](https://www.kaggle.com/minhnhatphan/rnsa21-cnn-lstm-github/notebook)
 
 If you want to run locally, there are certain steps you need to make:
  
