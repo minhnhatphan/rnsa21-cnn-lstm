@@ -81,11 +81,12 @@ def main(device, settings):
             LossMeter, 
             AccMeter
         )
+        
         loss, score = trainer.fit(
             CFG.n_epochs, 
             train_loader, 
             valid_loader, 
-            f"best-model-{fold}.pth", 
+            os.path.join(settings["MODEL_CHECKPOINT_DIR"], f"best-model-{fold}.pth"), 
             100,
         )
         losses.append(loss)
