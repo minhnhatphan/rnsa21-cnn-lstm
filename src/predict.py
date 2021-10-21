@@ -24,7 +24,7 @@ def main(device, settings):
     submission = pd.read_csv(os.path.join(settings['DATA_PATH'], "sample_submission.csv"))
 
     test_data_retriever = TestDataRetriever(
-        settings[TEST_DATA_PATH],
+        settings['TEST_DATA_PATH'],
         submission["BraTS21ID"].values,
         n_frames=CFG.n_frames,
         img_size=CFG.img_size
