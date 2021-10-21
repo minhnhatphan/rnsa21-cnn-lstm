@@ -16,7 +16,7 @@ from trainer import Trainer
 from data_retriever import DataRetriever
     
 def main(device, settings):
-    df = pd.read_csv(os.path.join(settings['DATA_PATH'], "train_label.csv"))
+    df = pd.read_csv(os.path.join(settings['DATA_PATH'], "train_labels.csv"))
     train_transform = A.Compose([
                                 A.HorizontalFlip(p=0.5),
                                 A.ShiftScaleRotate(
