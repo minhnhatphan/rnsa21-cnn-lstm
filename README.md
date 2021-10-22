@@ -28,3 +28,5 @@ If you want to run locally, there are certain steps you need to make:
 6. Run training script `python ./src/train.py --setting-path {PATH-TO-YOUR-SETTINGS.JSON}`
 7. Run prediction script `python ./src/predict.py --setting-path {PATH-TO-YOUR-SETTINGS.JSON}`
 8. You can download the trained checkpoints [here](https://www.kaggle.com/minhnhatphan/rnsa21-best-weights)
+
+If you have any questions, feel free to contact me at nminh238@gmail.com
